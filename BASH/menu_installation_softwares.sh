@@ -52,7 +52,8 @@ install_developpements() {
        sudo flatpak install flathub org.onlyoffice.desktopeditors -y
        sudo flatpak install flathub org.keepassxc.KeePassXC -y
        sudo flatpak install flathub com.visualstudio.code
-       echo "Installation developpements terminée."
+       echo "Installation developpements terminée.
+       }
 # Menu interactif
 while true; do
     echo "----------------------------------------"
