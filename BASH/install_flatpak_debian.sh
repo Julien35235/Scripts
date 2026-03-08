@@ -5,4 +5,4 @@ sudo apt update
 sudo apt install flatpak
 sudo apt install gnome-software-plugin-flatpak
 #Ajouter le dépôt Flathub
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
