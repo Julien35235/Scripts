@@ -17,6 +17,7 @@ flatpak install flathub org.onlyoffice.desktopeditors
 flatpak install flathub com.spotify.Client
 flatpak install flathub dev.aunetx.deezer
 flatpak install flathub us.zoom.Zoom
+flatpak install flathub org.videolan.VLC
 flatpak install flathub com.visualstudio.code
 
 #Installation de Foxit Redear pour lire ses PDF
