@@ -1,4 +1,6 @@
 #!/bin/bash
+# Mets à jour le système 
+sudo apt update && sudo apt upgrade -y
 # Installation des depances
 sudo apt install software-properties-common screen wget apt-transport-https gnupg nala htop -y
 cd /tmp

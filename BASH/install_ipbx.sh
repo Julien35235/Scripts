@@ -1,6 +1,6 @@
 #!/bin/bash
 # Mets à jour le système 
-apt update && apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 # Rendre le dossier tmp
 sudo cd /tmp
 # Téléchargement du serveur IPBX 

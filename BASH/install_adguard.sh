@@ -1,4 +1,6 @@
 #!/bin/bash
+# Mets à jour le système 
+sudo apt update && sudo apt upgrade -y
 #Installation de curl
 apt install curl htop nala -y
 #Installation du serveur de DNS
