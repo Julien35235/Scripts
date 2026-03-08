@@ -1,0 +1,2 @@
+﻿#Update WSL
+wsl --update

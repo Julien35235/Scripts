@@ -1,0 +1,2 @@
+﻿Invoke-WebRequest -Uri "https://github.com/microsoft/winget-cli/releases/download/v0.1.4331-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle" -OutFile "C:\TEMP\WinGet.appxbundle"
+Add-AppxPackage "C:\TEMP\WinGet.appxbundle"
