@@ -16,7 +16,6 @@ sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flat
 # Fonction pour installer les logiciels bureautiques
 install_bureautique() {
     echo "Installation des logiciels bureautiques..."
-    sudo flatpak install flathub org.libreoffice.LibreOffice -y
     sudo flatpak install flathub org.mozilla.firefox -y
     sudo flatpak install flathub com.anydesk.Anydesk -y
     sudo flatpak install flathub com.google.Chrome -y
@@ -41,7 +40,19 @@ install_gaming() {
     sudo flatpak install flathub org.keepassxc.KeePassXC -y
     echo "Installation gaming terminée."
 }
-
+# Fonction pour installer les logiciels gaming
+install_developpements() {
+       echo "Installation des logiciels developpement..."
+       sudo flatpak install flathub com.bitwarden.desktop -y
+       sudo flatpak install flathub org.mozilla.firefox -y
+       sudo flatpak install flathub com.google.Chrome -y
+       sudo flatpak install flathub com.slack.Slack -y
+       sudo flatpak install flathub chat.rocket.RocketChat -y
+       sudo flatpak install flathub us.zoom.Zoom -y
+       sudo flatpak install flathub org.onlyoffice.desktopeditors -y
+       sudo flatpak install flathub org.keepassxc.KeePassXC -y
+       sudo flatpak install flathub com.visualstudio.code
+       echo "Installation developpements terminée."
 # Menu interactif
 while true; do
     echo "----------------------------------------"
@@ -49,9 +60,10 @@ while true; do
     echo "----------------------------------------"
     echo "1. Installation Bureautique"
     echo "2. Installation Gaming"
-    echo "3. Quitter"
+     echo "3. Installation Developpements"
+    echo "4. Quitter"
     echo "----------------------------------------"
-    read -p "Choisissez une option (1-3) : " choix
+    read -p "Choisissez une option (1-4) : " choix
 
     case $choix in
         1)
@@ -61,6 +73,9 @@ while true; do
             install_gaming
             ;;
         3)
+           install_developpements
+           ;;
+         4)
             echo "Au revoir !"
             exit 0
             ;;
