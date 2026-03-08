@@ -22,11 +22,24 @@ install_bureautique() {
     sudo flatpak install flathub com.google.EarthPro -y
     sudo flatpak install flathub com.slack.Slack -y
     sudo flatpak install flathub chat.rocket.RocketChat -y
+    sudo flatpak install flathub org.telegram.desktop -y
     sudo flatpak install flathub us.zoom.Zoom -y
     sudo flatpak install flathub org.onlyoffice.desktopeditors -y
-    sudo flatpak install flathub com.opera.Opera -y
+    sudo flatpak install flathub com.vivaldi.Vivaldi -y
     sudo flatpak install flathub org.keepassxc.KeePassXC -y
     sudo flatpak install flathub com.bitwarden.desktop -y
+    sudo flatpak install flathub org.signal.Signal -y
+    sudo flatpak install flathub org.gnome.Calculator -y
+    sudo flatpak install flathub com.adobe.Reader -y
+    sudo flatpak install flathub org.filezillaproject.Filezilla -y
+    sudo flatpak install flathub org.gnome.TextEditor -y
+    sudo flatpak install flathub org.gnome.Calendar -y 
+    sudo flatpak install flathub org.gnome.SimpleScan -y
+    sudo flatpak install flathub net.code_industry.MasterPDFEditor -y
+    sudo flatpak install flathub com.nextcloud.desktopclient.nextcloud -y
+    sudo flatpak install flathub org.gnome.Papers -y
+    sudo flatpak install flathub app.drey.Dialect -y
+    sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
     sudo flatpak install flathub com.malwarebytes.Malwarebytes -y
     echo "Installation bureautique terminée."
 }
@@ -34,13 +47,35 @@ install_bureautique() {
 # Fonction pour installer les logiciels gaming
 install_gaming() {
     echo "Installation des logiciels gaming..."
+    sudo flatpak install flathub com.vivaldi.Vivaldi -y
+    sudo flatpak install flathub org.mozilla.firefox -y
+    sudo flatpak install flathub com.anydesk.Anydesk -y
+    sudo flatpak install flathub com.google.Chrome -y
+    sudo flatpak install flathub com.opera.Opera -y
     sudo flatpak install flathub com.valvesoftware.Steam -y
     sudo flatpak install flathub com.discordapp.Discord -y
     sudo flatpak install flathub com.obsproject.Studio -y
     sudo flatpak install flathub org.keepassxc.KeePassXC -y
+    sudo flatpak install flathub org.telegram.desktop -y
+    sudo flatpak install flathub org.signal.Signal -y
+    sudo flatpak install flathub com.valvesoftware.SteamLink -y
+    sudo flatpak install flathub com.warlordsoftwares.youtube-downloader-4ktube -y
+    sudo flatpak install flathub rocks.shy.VacuumTube -y
+    sudo flatpak install flathub io.github.ryubing.Ryujinx -y
+    sudo flatpak install flathub com.teamspeak.TeamSpeak -y
+    sudo flatpak install flathub com.ktechpit.ultimate-media-downloader -y
+    sudo flatpak install flathub dev.fredol.open-tv -y
+    sudo flatpak install flathub info.cemu.Cemu -y
+    sudo flatpak install flathub io.github.diegopvlk.Cine -y
+    sudo flatpak install flathub io.github.arunsivaramanneo.GPUViewer -y 
+    sudo flatpak install flathub io.github.spacingbat3.webcord -y
+    sudo flatpak install flathub org.kde.audiotube -y
+    sudo flatpak install flathub com.atlauncher.ATLauncher -y
+    sudo flatpak install flathub io.github.congard.qnvsm -y
+    sudo flatpak install flathub app.drey.Dialect -y
     echo "Installation gaming terminée."
 }
-# Fonction pour installer les logiciels gaming
+# Fonction pour installer les logiciels des developpeurs
 install_developpements() {
        echo "Installation des logiciels developpement..."
        sudo flatpak install flathub com.bitwarden.desktop -y
@@ -52,6 +87,25 @@ install_developpements() {
        sudo flatpak install flathub org.onlyoffice.desktopeditors -y
        sudo flatpak install flathub org.keepassxc.KeePassXC -y
        sudo flatpak install flathub com.visualstudio.code
+       sudo flatpak install flathub org.telegram.desktop -y
+       sudo flatpak install flathub org.signal.Signal -y
+       sudo flatpak install flathub org.audacityteam.Audacity -y
+       sudo flatpak install flathub com.google.AndroidStudio -y
+       sudo flatpak install flathub org.kde.gwenview -y
+       sudo flatpak install flathub org.gnome.Calculator -y
+       sudo flatpak install flathub com.adobe.Reader -y
+       sudo flatpak install flathub org.gnome.TextEditor -y
+       sudo flatpak install flathub io.github.shiftey.Desktop -y 
+       sudo flatpak install flathub org.gnome.Calendar -y
+       sudo flatpak install flathub org.gnome.Papers -y
+       sudo flatpak install flathub com.jetbrains.PyCharm-Professional -y
+       sudo flatpak install flathub com.jetbrains.IntelliJ-IDEA-Ultimate -y
+       sudo flatpak install flathub com.jetbrains.Rider -y
+       sudo flatpak install flathub com.jetbrains.CLion -y
+        sudo flatpak install flathub app.drey.Dialect -y
+        sudo flatpak install flathub cc.arduino.arduinoide -y
+        sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
+        sudo flatpak install flathub com.jetbrains.WebStorm -y
        echo "Installation developpements terminée.
        }
 # Menu interactif
