@@ -1,6 +1,6 @@
 #!/bin/bash
 # Installation des depances
-sudo apt install software-properties-common screen wget apt-transport-https gnupg nala htop
+sudo apt install software-properties-common screen wget apt-transport-https gnupg nala htop -y
 cd /tmp
 wget https://download.oracle.com/java/21/latest/jdk-21_linux-x64_bin.deb
 sudo apt install ./jdk-21_linux-x64_bin.deb -y
@@ -10,9 +10,5 @@ sudo mkdir /opt/minecraft
 sudo cd /opt/minecraft
 sudo wget https://piston-data.mojang.com/v1/objects/4707d00eb834b446575d89a61a11b5d548d8c001/server.jar
 sudo java -Xms1024M -Xmx1024M -jar minecraft_server_1.15.2.jar nogui
-
-
-
-
 
 
