@@ -41,6 +41,7 @@ install_bureautique() {
     sudo flatpak install flathub app.drey.Dialect -y
     sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
     sudo flatpak install flathub com.malwarebytes.Malwarebytes -y
+    sudo flatpak install flathub io.github.bytezz.IPLookup -y
     echo "Installation bureautique terminée."
 }
 
@@ -59,6 +60,7 @@ install_gaming() {
     sudo flatpak install flathub org.telegram.desktop -y
     sudo flatpak install flathub org.signal.Signal -y
     sudo flatpak install flathub com.valvesoftware.SteamLink -y
+    sudo flatpak install flathub org.vinegarhq.Sober -y
     sudo flatpak install flathub com.warlordsoftwares.youtube-downloader-4ktube -y
     sudo flatpak install flathub rocks.shy.VacuumTube -y
     sudo flatpak install flathub io.github.ryubing.Ryujinx -y
@@ -73,6 +75,10 @@ install_gaming() {
     sudo flatpak install flathub com.atlauncher.ATLauncher -y
     sudo flatpak install flathub io.github.congard.qnvsm -y
     sudo flatpak install flathub app.drey.Dialect -y
+    sudo flatpak install flathub org.DolphinEmu.dolphin-emu -y
+    sudo flatpak install flathub org.desmume.DeSmuME -y
+    sudo flatpak install flathub xyz.hyperplay.HyperPlay -y
+    sudo flatpak install flathub net.kuribo64.melonDS -y
     echo "Installation gaming terminée."
 }
 # Fonction pour installer les logiciels des developpeurs
@@ -106,7 +112,8 @@ install_developpements() {
         sudo flatpak install flathub cc.arduino.arduinoide -y
         sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
         sudo flatpak install flathub com.jetbrains.WebStorm -y
-       echo "Installation developpements terminée.
+        sudo flatpak install flathub io.github.bytezz.IPLookup -y
+       echo "Installation developpements terminée."
        }
 # Menu interactif
 while true; do
