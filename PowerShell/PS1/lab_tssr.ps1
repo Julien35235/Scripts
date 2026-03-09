@@ -15,7 +15,7 @@ $PSDefaultParameterValues = @{
 ### Routeur
 # Configuration de la carte réseau de la VM
 $LabNet_Routeur = @()
-$LabNet_Routeur += New-LabNetworkAdapterDefinition -VirtualSwitch "LabADNet" -Ipv4Address 10.10.10.1
+$LabNet_Routeur += New-LabNetworkAdapterDefinition -VirtualSwitch "LabADNet" -Ipv4Address 192.168.1.1
 $LabNet_Routeur += New-LabNetworkAdapterDefinition -VirtualSwitch "LabWAN" -UseDhcp
 
 # Déclarer une nouvelle VM
@@ -25,7 +25,7 @@ Add-LabMachineDefinition -Name VM-Routeur -Roles Routing  -OperatingSystem "Wind
 ### Contrôleur de domaine SRV-ADDS-01
 # Configuration de la carte réseau de la VM
 $LabNet_SRV_ADDS_01 = @()
-$LabNet_SRV_ADDS_01 += New-LabNetworkAdapterDefinition -VirtualSwitch "LabADNet" -Ipv4Address 192.168.10.101
+$LabNet_SRV_ADDS_01 += New-LabNetworkAdapterDefinition -VirtualSwitch "LabADNet" -Ipv4Address 192.168.1.100
 
 # Configurer le domaine Active Directory
 $ADDSConfig = Get-LabMachineRoleDefinition -Role RootDC @{
@@ -41,5 +41,6 @@ Add-LabMachineDefinition -Name VM-SRV-ADDS-01 -Roles $ADDSConfig `
                          -DomainName "ads.tssr.local" -NetworkAdapter $LabNet_SRV_ADDS_01
 
 Install-Lab
+
 
 
