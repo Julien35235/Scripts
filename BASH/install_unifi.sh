@@ -14,7 +14,3 @@ sudo apt install default-jdk -y
 echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/ubiquiti-archive-keyring.gpg] https://www.ui.com/downloads/unifi/debian stable ubiquiti' | sudo tee /etc/apt/sources.list.d/100-ubnt-unifi.list >/dev/null
 curl https://dl.ui.com/unifi/unifi-repo.gpg | sudo tee /usr/share/keyrings/ubiquiti-archive-keyring.gpg >/dev/null
 sudo apt update && sudo apt install unifi -y
-
-
-
-
