@@ -42,6 +42,7 @@ install_bureautique() {
     sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
     sudo flatpak install flathub com.malwarebytes.Malwarebytes -y
     sudo flatpak install flathub io.github.bytezz.IPLookup -y
+    sudo flatpak install flathub net.xmind.XMind -y
     echo "Installation bureautique terminée."
 }
 
@@ -113,6 +114,7 @@ install_developpements() {
         sudo flatpak install flathub com.adobe.Flash-Player-Projector -y
         sudo flatpak install flathub com.jetbrains.WebStorm -y
         sudo flatpak install flathub io.github.bytezz.IPLookup -y
+       sudo flatpak install flathub net.xmind.XMind -y
        echo "Installation developpements terminée."
        }
 # Menu interactif
