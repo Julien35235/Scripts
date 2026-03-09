@@ -10,7 +10,7 @@ $PSDefaultParameterValues = @{
     'Add-LabMachineDefinition:DnsServer1'= '192.168.1.100'
     'Add-LabMachineDefinition:Gateway' = '192.168.1.1'    
     'Add-LabMachineDefinition:OperatingSystem'= 'Windows Server 2025 Standard (Desktop Experience)'
-    'Add-LabMachineDefinition:DomainName'= 'tssr.local'     
+    'Add-LabMachineDefinition:DomainName'= 'ads.tssr.local'     
 }
 ### Routeur
 # Configuration de la carte réseau de la VM
@@ -29,16 +29,17 @@ $LabNet_SRV_ADDS_01 += New-LabNetworkAdapterDefinition -VirtualSwitch "LabADNet"
 
 # Configurer le domaine Active Directory
 $ADDSConfig = Get-LabMachineRoleDefinition -Role RootDC @{
-    NetBiosDomainName = 'IT-Connect'
+    NetBiosDomainName = 'tssr'
     ForestFunctionalLevel = 'Win2025'
     DomainFunctionalLevel = 'Win2025'
-    SiteName = 'tssr.local'
+    SiteName = 'ads.tssr.local'
     SiteSubnet = '192.168.1.1/24'
 }
 
 # Déclarer une nouvelle VM
 Add-LabMachineDefinition -Name VM-SRV-ADDS-01 -Roles $ADDSConfig `
-                         -DomainName "tssr.local" -NetworkAdapter $LabNet_SRV_ADDS_01
+                         -DomainName "ads.tssr.local" -NetworkAdapter $LabNet_SRV_ADDS_01
 
 Install-Lab
+
 
