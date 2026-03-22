@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 # Mets à jour le système
 #Installation de sudo
 apt install sudo -y
