@@ -1,9 +1,8 @@
 #!/bin/bash
-
-# ======================================
+ ======================================
 #  CONFIGURATION DES LOGS
 # ======================================
-LOGFILE="/var/log/install_apache.log"
+LOGFILE="/var/log/install_clonezilla.log"
 exec > >(tee -a "$LOGFILE") 2>&1
 echo "===== Début du script : $(date) ====="
 
@@ -16,20 +15,13 @@ sudo apt update && sudo apt full-upgrade -y
 # ======================================
 #  INSTALLATION DES PAQUETS
 # ======================================
-echo "[INFO] Installation des paquets htop, nala et apache2..."
-sudo apt install  htop nala apache2 -y
+echo "[INFO] Installation des paquets htop, nala et clonezilla..."
+sudo apt install  htop nala clonezilla -y
 
 # ======================================
-#  ACTIVATION DU SERVICE APACHE2
+# Lancements de Clonezilla
 # ======================================
-echo "[INFO] Activation du service Apache2..."
-sudo systemctl enable apache2
-
-# ======================================
-#  DÉMARRAGE DU SERVICE
-# ======================================
-echo "[INFO] Démarrage du service Apache2..."
-sudo systemctl start apache2
-
+echo "[INFO] Activation du service de Clonezilla..."
+sudo clonezilla
 echo "===== Fin du script : $(date) ====="
 echo "[INFO] Installation terminée. Logs disponibles dans : $LOGFILE"
