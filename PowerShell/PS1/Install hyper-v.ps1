@@ -6,3 +6,4 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-All
 Install-WindowsFeature -Name Hyper-V-PowerShell
 # Install Hyper-V Manager and the PowerShell module (HVM only available on GUI systems)
 Install-WindowsFeature -Name RSAT-Hyper-V-Tools
+Restart-Computer
