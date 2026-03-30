@@ -17,4 +17,4 @@ sudo mv glpi /var/www/html/
 sudo chown -R www-data:www-data /var/www/html/g|pi/
 sudo chmod-755 /var/www/html/glpi/
 #Redémarrage Serveur Web
-sudo systemct! restart apache2
+sudo systemctl restart apache2
