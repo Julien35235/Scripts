@@ -6,4 +6,4 @@ sudo ufw allow 1022/tcp
 sudo ufw reload
 sudo do-release-upgrade 
 sudo do-release-upgrade -d
-sudo do-release-upgrade -d
+sudo reboot
