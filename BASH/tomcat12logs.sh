@@ -12,7 +12,7 @@ sudo apt update && sudo apt full-upgrade -y
 
 # === INSTALLATION DES PACKAGES ===
 echo "[INFO] Installation des dépendances et de Tomcat 10…"
-sudo apt install -y default-jdk htop nala tomcat10 tomcat10-admin tomcat10-docs tomcat10-examples
+sudo apt install default-jdk htop nala tomcat10 tomcat10-admin tomcat10-docs tomcat10-examples -y
 
 # === ACTIVATION DU SERVICE ===
 echo "[INFO] Activation et démarrage du service Tomcat…"
