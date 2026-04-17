@@ -1,6 +1,6 @@
 #!/bin/bash
 # mets à jour mon système 
-sudo apt update && sudo apt full-upgrade 
+sudo apt update && sudo apt full-upgrade -y
 #Installations des paquets  
 sudo apt install nala htop curl wget htop gnupg2 debconf adduser procps gnupg apt-transport-https filebeat debhelper libcap2-bin -y
 curl -s https://packages.wazuh.com/key/GPG-KEY-WAZUH | gpg --no-default-keyring --keyring gnupg-ring:/usr/share/keyrings/wazuh.gpg --import && chmod 644 /usr/share/keyrings/wazuh.gpg
