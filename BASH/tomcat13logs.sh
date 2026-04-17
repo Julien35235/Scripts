@@ -17,7 +17,7 @@ sudo apt update && sudo apt full-upgrade -y
 #  INSTALLATION DES OUTILS
 # =============================
 echo "[INFO] Installation des outils requis…"
-sudo apt install -y wget nala htop
+sudo apt install wget nala htop -y
 
 # =============================
 #  INSTALLATION DE TOMCAT 11
