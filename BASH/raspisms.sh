@@ -15,11 +15,11 @@ echo " Mise à jour du système..."
 sudo apt update  && sudo apt full-upgrade -y
 
 echo "Installation des dépendances..."
-sudo apt install -y ca-certificates apt-transport-https software-properties-common \
-wget curl lsb-release gnupg2 git apache2 mariadb-server gammu gammu-smsd python3-gammu
+sudo apt install ca-certificates apt-transport-https software-properties-common \
+wget curl lsb-release gnupg2 git apache2 mariadb-server gammu gammu-smsd python3-gammu -y
 
 echo "Installation de PHP..."
-sudo apt install -y php php-cli php-mysql php-json php-curl php-mbstring php-xml
+sudo apt install php php-cli php-mysql php-json php-curl php-mbstring php-xml  -y
 
 echo " Ajout du dépôt officiel RaspiSMS..."
 echo "deb https://apt.raspisms.fr/ buster contrib" > /etc/apt/sources.list.d/raspisms.list
@@ -28,7 +28,7 @@ curl https://apt.raspisms.fr/conf/pub.gpg.key | apt-key add -
 sudo apt update 
 
 echo " Installation de RaspiSMS..."
-sudo apt install -y raspisms
+sudo apt install  raspisms -y
 
 echo " Configuration Apache2..."
 cat >/etc/apache2/sites-available/raspisms.conf <<EOF
