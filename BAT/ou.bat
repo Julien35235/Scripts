@@ -1,0 +1,7 @@
+dsadd ou "OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Comptabilite,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Direction,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Ressources_Humaines,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Support_Utilisateur,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Commercial,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
+dsadd ou "OU=Informatique,OU=Utilisateurs,DC=ads,DC=tssr,DC=local"
