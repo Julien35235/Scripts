@@ -3,6 +3,9 @@
 # Fichier de log avec date
 LOGFILE="$HOME/brew_update_$(date +%Y-%m-%d_%H-%M-%S).log"
 
+# PATH pour cron (OBLIGATOIRE)
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+
 echo "===== Début de la mise à jour Homebrew : $(date) =====" | tee -a "$LOGFILE"
 
 # Vérifier que brew est installé
