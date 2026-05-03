@@ -6,7 +6,7 @@ Suites: trixie
 Components: pve-no-subscription
 Signed-By: /usr/share/keyrings/proxmox-archive-keyring.gpg
 EOL
-sudo apt update && apt full-upgrade
+sudo apt update && apt full-upgrade -y
 sudo apt install proxmox-default-kernel proxmox-ve postfix open-iscsi chrony
 update-grub
 sudo reboot
