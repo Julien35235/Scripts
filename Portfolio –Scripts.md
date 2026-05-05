@@ -34,7 +34,7 @@ Les scripts couvrent :
 - Scripts de sauvegarde
 - Menus interactifs en ligne de commande
 - Mise à jour automatique du système
-- Installation de services (GLPI, SSH)
+- Installation des services (GLPI, SSH)
 - Administration réseau
 - Maintenance serveur
 
