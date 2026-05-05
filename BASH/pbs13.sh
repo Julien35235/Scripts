@@ -11,3 +11,5 @@ sudo echo "deb http://download.proxmox.com/debian/pbs trixie pbs-no-subscription
   | sudo tee -a /etc/apt/sources.list.d/proxmox-backup-server.list
 #Installation du serveur de PBS
 sudo apt update && sudo apt install proxmox-backup -y
+#Redemarrage du serveur 
+sudo reboot
