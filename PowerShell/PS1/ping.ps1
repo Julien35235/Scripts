@@ -1,0 +1,1 @@
+for /L %i in (1,1,255) do @ping -n 1 -w 100 10.235.95.%i | find "TTL="
