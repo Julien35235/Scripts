@@ -1,7 +1,7 @@
 #!/bin/bash
 #Mise à jour du système 
 sudo apt update && sudo apt full upgrade -y
-#Installation de l’environnement de bureau GNOME
+#Installation de l’environnement de bureau KDE
 sudo apt install kali-desktop-kde -y
 #Redemarrage du système
 sudo reboot
