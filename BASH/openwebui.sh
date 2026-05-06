@@ -98,6 +98,6 @@ systemctl enable openwebui
 systemctl start openwebui
 
 echo "===== INSTALLATION TERMINEE ====="
-echo "✅ OpenWebUI accessible : http://localhost:3000"
-echo "✅ Ollama API : http://localhost:11434"
-echo "✅ Service : systemctl status openwebui"
+echo "OpenWebUI accessible : http://localhost:3000"
+echo "Ollama API : http://localhost:11434"
+echo "Service : systemctl status openwebui"
