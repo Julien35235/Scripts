@@ -18,7 +18,6 @@ deb [signed-by=/usr/share/keyrings/openmediavault-archive-keyring.gpg] http://pa
 deb [signed-by=/usr/share/keyrings/openmediavault-archive-keyring.gpg] http://packages.openmediavault.io/ synchrony partner
 deb [signed-by=/usr/share/keyrings/openmediavault-archive-keyring.gpg] http://downloads.sourceforge.net/project/openmediavault/packages/ synchrony partner
 EOF
-#Installion de OMV
 export LANG=C.UTF-8
 export DEBIAN_FRONTEND=noninteractive
 export APT_LISTCHANGES_FRONTEND=none
@@ -32,3 +31,5 @@ apt-get --yes --auto-remove --show-upgraded \
 
 omv-confdbadm populate
 omv-salt deploy run systemd-networkd
+#Redemarrage du système
+sudo reboot
