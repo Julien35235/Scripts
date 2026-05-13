@@ -13,7 +13,7 @@ echo "===== Installation Ollama + OpenWebUI (Sans Docker) ====="
 # ======================================
 # MISE À JOUR
 # ======================================
-apt update && apt upgrade -y
+apt update && apt full-upgrade -y
 
 # ======================================
 # INSTALLATION OLLAMA
