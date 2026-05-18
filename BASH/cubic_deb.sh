@@ -6,4 +6,4 @@ sudo apt-add-repository ppa:cubic-wizard/release
 #Actualisation des mises à jour
 sudo apt update
 #Installation du logicels de Cubic
-sudo apt install cubic
+sudo apt install cubic -y
