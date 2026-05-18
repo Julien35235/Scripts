@@ -14,3 +14,5 @@ sudo apt update
 sudo apt install proxmox-default-kernel proxmox-ve postfix open-iscsi chrony-y
 #Mise à jour du menu de démarrage du système
 update-grub
+#Redemmarage du système
+sudo reboot
