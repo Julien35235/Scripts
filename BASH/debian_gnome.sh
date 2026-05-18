@@ -3,4 +3,5 @@
 sudo apt update && sudo apt full upgrade -y
 #Installation de l'enviromment bureau de Gnome dans Debian
 apt install install -y gnome-core gdm3 
+#Redemmarage du système
 sudo reboot
