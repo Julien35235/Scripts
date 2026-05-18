@@ -7,5 +7,3 @@ sudo apt install cockpit -y
 sudo systemctl enable cockpit.socket
 #Demmarge du service de cockpit
 sudo systemctl start cockpit.socket
-
-
