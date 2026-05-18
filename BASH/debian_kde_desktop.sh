@@ -3,4 +3,5 @@
 sudo apt update && sudo apt full upgrade -y
 #Installation de l'enviromment bureau de KDE full dans Debian
 sudo apt install install task-kde-desktop -y
+#Redemmarage du système
 sudo reboot
