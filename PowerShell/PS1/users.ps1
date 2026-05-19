@@ -18,6 +18,3 @@ Get-LocalGroupMember -Group "Administrateurs"
 #Disable-LocalUser -Name "Administrateur"
 #Gestion des groupes locaux
 Get-LocalGroup
-
-
-
