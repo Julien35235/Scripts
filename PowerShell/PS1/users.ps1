@@ -3,7 +3,7 @@
 $AccountPassword = ConvertTo-SecureString "P@ssw0rd123!" -AsPlainText -Force
 $AccountDescription = "Compte de test"
 
-# Créer le compte local
+# Création d'un compte local
 New-LocalUser $AccountName -Password $AccountPassword -FullName $AccountName -Description $AccountDescription
 #Ce nouveau compte apparaît bien dans la liste des comptes locaux
 Get-LocalUser
