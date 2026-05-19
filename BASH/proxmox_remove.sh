@@ -9,3 +9,5 @@ update-grub
 #Suppresion des dépots de Proxmox 
 rm /etc/apt/sources.list.d/pve-install-repo.list
 rm /etc/apt/trusted.gpg.d/proxmox-release.gpg
+#Redemmarge du système
+sudo reboot
