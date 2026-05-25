@@ -9,4 +9,4 @@ sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
 sudo apt update 
 sudo apt full-upgrade
 #Redemarrage du serveur 
-sudo reboot
+#sudo reboot
