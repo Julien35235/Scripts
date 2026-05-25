@@ -1,6 +1,6 @@
 #!/bin/bash
 #Mise à jour du système 
-sudo apt update && sudo apt full upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 #Installation de la prise en main à distance xrdp
 apt install ufw xrdp -y
 #Activation du service xrdp 
