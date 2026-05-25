@@ -1,6 +1,6 @@
 #!/bin/bash
 #Mise à jour du système 
-sudo apt update && sudo apt full upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 #installation de wget 
 sudo apt install wget curl htop nala -y
 #se déplacer dans opt
