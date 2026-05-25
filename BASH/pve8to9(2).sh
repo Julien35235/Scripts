@@ -9,7 +9,7 @@ apt remove systemd-boot -y
 sed -i 's/bookworm/trixie/g' /etc/apt/sources.list
 #Suppresion de ceph
 rm /etc/apt/sources.list.d/ceph.list
-#Attualisation des mises à jour
+#Actualisation des mises à jour
 apt update
 #Installation du packet amd64-microcode
 apt install amd64-microcode -y
