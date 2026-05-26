@@ -1,6 +1,6 @@
 #!/bin/bash
 #Mise à jour du système 
-sudo apt update && sudo apt full upgrade -y
+sudo apt update && sudo apt full-upgrade -y
 #Installation des packets nécessaire pour Docker et wget
 sudo apt install docker.io wget -y
 #Activation du démarrage automatique de docker
