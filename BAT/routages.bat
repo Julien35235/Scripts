@@ -6,4 +6,3 @@ route add 192.168.100.0 MASK 255.255.255.0 10.10.20.1
 route add -p 192.168.100.0 MASK 255.255.255.0 10.10.20.1
 #Affichage de la table de routage 
 route print
-
