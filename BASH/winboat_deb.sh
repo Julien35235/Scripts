@@ -2,7 +2,7 @@
 #Mise à jour du système 
 sudo apt update && sudo apt full-upgrade -y
 #Installation des packets nécessaire pour Docker et wget
-sudo apt install docker.io wget apt-transport-https ca-certificates curl gnupg2 -y
+sudo apt install docker.io wget curl apt-transport-https ca-certificates curl gnupg2 -y
 sudo usermod -aG docker $USER
 #Ajouter le dépôt officiel Docker
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
