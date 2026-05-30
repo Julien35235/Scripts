@@ -3,7 +3,7 @@
 sudo dnf update
 sudo dnf upgrade -y
 #Installation de la prise en main à distance xrdp
-sudo dnf install -y xrdp 
+sudo dnf install -y xrdp epel-release 
 #Activation du service xrdp 
 systemctl enable xrdp
 #Activation du service xrdp en automatique
