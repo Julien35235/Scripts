@@ -30,7 +30,7 @@ Foreach($Feature in $FeatureList){
 } # Foreach($Feature in $FeatureList)
 
 #Création du domaine Active Directory
-$DomainNameDNS = "tssrlab.lab"
+$DomainNameDNS = "tssrlab.local"
 $DomainNameNetbios = "TSSR"
 
 $ForestConfiguration = @{
