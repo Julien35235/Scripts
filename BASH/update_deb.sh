@@ -1,4 +1,4 @@
-# Contenu du script "script.sh"
+# Contenu du script "update.sh"
 #!/bin/bash
 echo ">>------------------------------------------------$(date)---------------------------------------------<<" >> /var/log/update_upgrade.log
 echo ">>------------------errors------------------------------$(date)---------------errors------------------------------<<" >> /var/log/update_upgrade.err
