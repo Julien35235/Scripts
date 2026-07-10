@@ -18,10 +18,13 @@ URLS=(
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso"
     "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
+    "https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso"
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso"
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso"
     "https://repo.almalinux.org/almalinux/10/live/x86_64/AlmaLinux-10.2-x86_64-Live-GNOME.iso"
     "https://repo.almalinux.org/almalinux/10/live/x86_64/AlmaLinux-10.2-x86_64-Live-KDE.iso"
+    "https://repo.almalinux.org/almalinux/10/isos/x86_64/AlmaLinux-10.2-x86_64-dvd.iso"
+    "https://repo.almalinux.org/almalinux/10/isos/x86_64/AlmaLinux-10.2-x86_64-boot.iso"
     "https://cdimages.ubuntu.com/edubuntu/releases/26.04/release/edubuntu-26.04-desktop-amd64.iso"
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Core-64-bit.iso"
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso"
@@ -29,6 +32,7 @@ URLS=(
     "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-minimal.iso"
     "https://iso.pop-os.org/24.04/amd64/generic/25/pop-os_24.04_amd64_generic_25.iso"
     "https://kali.download/base-images/kali-2026.2/kali-linux-2026.2-installer-netinst-amd64.iso"
+    "https://deb.parrot.sh/parrot/iso/7.3/Parrot-security-7.3_amd64.iso"
     "https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso"
     "https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-xfce-64bit.iso"
     "https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-mate-64bit.iso"
@@ -43,6 +47,12 @@ URLS=(
     "https://enterprise.proxmox.com/iso/proxmox-mail-gateway_9.1-1.iso"
     "https://enterprise.proxmox.com/iso/proxmox-datacenter-manager_1.1-1.iso"
    "https://archive.org/download/endless-os-3x-64bit-pc/eos-eos3.9-amd64-amd64.210706-203204.base.iso"
+  "https://cdn77.cachyos.org/ISO/desktop/260628/cachyos-desktop-linux-260628.iso"
+ "https://nobara-images.nobaraproject.org/Nobara-43-Official-NV-2026-04-24.iso"
+"https://nobara-images.nobaraproject.org/Nobara-43-GNOME-NV-2026-04-25.iso"
+"https://nobara-images.nobaraproject.org/Nobara-43-KDE-NV-2026-04-25.iso"
+"https://nobara-images.nobaraproject.org/Nobara-43-Steam-HTPC-NV-2026-04-25.iso"
+  
 
     
 )
