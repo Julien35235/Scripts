@@ -14,7 +14,9 @@ cd "$TARGET_DIR" || { echo "Impossible d'accéder à $TARGET_DIR. Fin du script.
 # 3. Liste des URL des ISO à télécharger (facile à mettre à jour)
 URLS=(
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-desktop-amd64.iso"
+    "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso"
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso"
+    "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Workstation/x86_64/iso/Fedora-Workstation-Live-44-1.7.x86_64.iso"
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/Server/x86_64/iso/Fedora-Server-dvd-x86_64-44-1.7.iso"
@@ -22,6 +24,7 @@ URLS=(
     "https://repo.almalinux.org/almalinux/10/live/x86_64/AlmaLinux-10.2-x86_64-Live-KDE.iso"
     "https://cdimages.ubuntu.com/edubuntu/releases/26.04/release/edubuntu-26.04-desktop-amd64.iso"
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Core-64-bit.iso"
+    "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso"
     "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-dvd1.iso"
     "https://download.rockylinux.org/pub/rocky/10/isos/x86_64/Rocky-10.2-x86_64-minimal.iso"
     "https://iso.pop-os.org/24.04/amd64/generic/25/pop-os_24.04_amd64_generic_25.iso"
@@ -35,6 +38,12 @@ URLS=(
     "https://cdimage.ubuntu.com/kubuntu/releases/26.04/release/kubuntu-26.04-desktop-amd64.iso"
     "https://download.fedoraproject.org/pub/fedora/linux/releases/44/KDE/x86_64/iso/Fedora-KDE-Desktop-Live-44-1.7.x86_64.iso"
     "https://fastly.mirror.pkgbuild.com/iso/2026.07.01/archlinux-x86_64.iso"
+    "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso"
+    "https://enterprise.proxmox.com/iso/proxmox-backup-server_4.2-1.iso"
+    "https://enterprise.proxmox.com/iso/proxmox-mail-gateway_9.1-1.iso"
+    "https://enterprise.proxmox.com/iso/proxmox-datacenter-manager_1.1-1.iso"
+   "https://archive.org/download/endless-os-3x-64bit-pc/eos-eos3.9-amd64-amd64.210706-203204.base.iso"
+
     
 )
 
