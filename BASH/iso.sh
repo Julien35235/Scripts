@@ -68,6 +68,7 @@ URLS=(
    "https://channels.nixos.org/nixos-26.05/latest-nixos-minimal-x86_64-linux.iso"
    "https://archive.org/download/endless-os-3x-64bit-pc/eos-eos3.9-amd64-amd64.210706-203204.base.iso"
   "https://cdn77.cachyos.org/ISO/desktop/260628/cachyos-desktop-linux-260628.iso"
+  "https://dn721805.ca.archive.org/0/items/steam-os/SteamOS.iso"
   "https://mirror.lagoon.nc/linuxlite/linuxlite/isos/8.0/linux-lite-8.0-64bit.iso"
  "https://nobara-images.nobaraproject.org/Nobara-43-Official-NV-2026-04-24.iso"
 "https://nobara-images.nobaraproject.org/Nobara-43-GNOME-NV-2026-04-25.iso"
