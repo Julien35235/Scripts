@@ -12,7 +12,7 @@ tar xzvf iventoy-1.0.21-linux-free.tar.gz
 rm iventoy-1.0.19-linux-free.tar.gz
 #Rennomage de l'archive de iVentoy
 mv iventoy-1.0.19 iventoy
-cd iventoy
+cd /opt/iventoy
 #Demmarage du serveur PXE
 sudo bash iventoy.sh start
 
