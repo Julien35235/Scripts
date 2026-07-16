@@ -53,6 +53,7 @@ ISO_EDUCATIONS=(
 
 # --- SERVEURS & SYSTÈMES ---
 ISO_SERVEUR=(
+    "https://downloads.xenserver.com/xenserver/2026-06-23.0132/XenServer9_2026-06-23.iso"
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso"
     "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
@@ -73,6 +74,7 @@ ISO_SERVEUR=(
     "https://pkg.adfinis-on-exoscale.ch/opensuse/distribution/leap/16.0/offline/Leap-16.0-online-installer-x86_64.install.iso"
     "https://channels.nixos.org/nixos-26.05/latest-nixos-minimal-x86_64-linux.iso"
     "https://download.freebsd.org/releases/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-dvd1.iso"
+
 )
 
 # --- MULTIMÉDIA STREAMING / CLOUD PERSO ---
