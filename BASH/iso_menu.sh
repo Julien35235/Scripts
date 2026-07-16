@@ -48,6 +48,7 @@ ISO_EDUCATIONS=(
     "https://cdimage.ubuntu.com/edubuntu/releases/noble/release/edubuntu-24.04.4-desktop-amd64.iso"
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso"
     "https://archive.org/download/endless-os-3x-64bit-pc/eos-eos3.9-amd64-amd64.210706-203204.base.iso"
+    "https://primtux.fr/PrimTux9-M22.3-64bit-2026-02-27.iso"
 )
 
 # --- SERVEURS & SYSTÈMES ---
