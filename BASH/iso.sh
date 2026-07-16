@@ -60,6 +60,7 @@ URLS=(
     "https://opensuse.mirror.garr.it/mirrors/opensuse/tumbleweed/iso/openSUSE-Tumbleweed-NET-x86_64-Snapshot20260714-Media.iso"
     "https://pkg.adfinis-on-exoscale.ch/opensuse/distribution/leap/16.0/offline/Leap-16.0-offline-installer-x86_64.install.iso"
     "https://pkg.adfinis-on-exoscale.ch/opensuse/distribution/leap/16.0/offline/Leap-16.0-online-installer-x86_64.install.iso"
+    "https://primtux.fr/PrimTux9-M22.3-64bit-2026-02-27.iso"
     "https://fastly.mirror.pkgbuild.com/iso/2026.07.01/archlinux-x86_64.iso"
     "https://download.manjaro.org/kde/26.0.4/manjaro-kde-26.0.4-260327-linux618.iso"
     "https://download.manjaro.org/xfce/26.0.4/manjaro-xfce-26.0.4-260327-linux618.iso"
