@@ -36,6 +36,7 @@ URLS=(
     "https://enterprise.proxmox.com/iso/proxmox-backup-server_4.2-1.iso"
     "https://enterprise.proxmox.com/iso/proxmox-mail-gateway_9.1-1.iso"
     "https://enterprise.proxmox.com/iso/proxmox-datacenter-manager_1.1-1.iso"
+    "https://downloads.xenserver.com/xenserver/2026-06-23.0132/XenServer9_2026-06-23.iso"
     "https://umbrel-release-assets.a45c7e2f6ae2c47088a72e84553d4403.r2.cloudflarestorage.com/1.7.4/umbrelos-amd64-usb-installer.iso"
     "https://deac-ams.dl.sourceforge.net/project/openmediavault/iso/8.3.1/openmediavault_8.3.1-amd64.iso"
     "https://muug.ca/mirror/linuxmint/iso/debian/lmde-7-cinnamon-64bit.iso"
