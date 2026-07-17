@@ -76,9 +76,8 @@ URLS=(
 "https://nobara-images.nobaraproject.org/Nobara-43-GNOME-NV-2026-04-25.iso"
 "https://nobara-images.nobaraproject.org/Nobara-43-KDE-NV-2026-04-25.iso"
 "https://nobara-images.nobaraproject.org/Nobara-43-Steam-HTPC-NV-2026-04-25.iso"
-  
-
-    
+"https://archive.org/download/google-chrome-os-.-iso-team-mjy-movie-jockey.-com/Google%20Chrome%20OS%20.ISO%20~%20Team%20MJY%20~MovieJockey.Com.iso"
+      
 )
 
 # 4. Boucle de téléchargement intelligente
