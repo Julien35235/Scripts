@@ -40,6 +40,7 @@ ISO_BUREAUTIQUE=(
     "https://releases.nixos.org/nixos/26.05/nixos-26.05.4937.8eeec934ae0d/nixos-graphical-26.05.4937.8eeec934ae0d-x86_64-linux.iso"
     "https://mirror.lagoon.nc/linuxlite/linuxlite/isos/8.0/linux-lite-8.0-64bit.iso"
     "https://fastly.mirror.pkgbuild.com/iso/2026.07.01/archlinux-x86_64.iso"
+    "https://archive.org/download/google-chrome-os-.-iso-team-mjy-movie-jockey.-com/Google%20Chrome%20OS%20.ISO%20~%20Team%20MJY%20~MovieJockey.Com.iso"
 )
 
 # --- MULTIMÉDIA & ÉDUCATION ---
