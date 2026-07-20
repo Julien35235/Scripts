@@ -1,4 +1,8 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+# ==============================================================================
+#  GESTIONNAIRE DE TÉLÉCHARGEMENT D'IMAGES ISO POUR IVENTOY
+# ==============================================================================
 
 # 1. Définition du répertoire cible
 TARGET_DIR="/opt/iventoy/iso"
@@ -6,13 +10,12 @@ TARGET_DIR="/opt/iventoy/iso"
 # 2. Vérification et sécurisation du dossier
 if [ ! -d "$TARGET_DIR" ]; then
     echo "[INFO] Le répertoire $TARGET_DIR n'existe pas. Création en cours..."
-    mkdir -p "$TARGET_DIR" || { echo "[ERREUR] Impossible de créer le dossier. Fin du script."; exit 1; }
+    mkdir -p "$TARGET_DIR" || { echo "[ERREUR] Impossible de créer le dossier $TARGET_DIR. Fin du script."; exit 1; }
 fi
 
 cd "$TARGET_DIR" || { echo "[ERREUR] Impossible d'accéder à $TARGET_DIR. Fin du script."; exit 1; }
 
-# 3. Déclaration des ISO classées par catégories (tableaux associatifs)
-# Note : Nous utilisons des variables classiques indexées pour une meilleure compatibilité Bash.
+# 3. Déclaration des tableaux d'URLs par catégorie
 
 # --- BUREAUTIQUE / USAGE GÉNÉRAL ---
 ISO_BUREAUTIQUE=(
@@ -43,8 +46,8 @@ ISO_BUREAUTIQUE=(
     "https://archive.org/download/google-chrome-os-.-iso-team-mjy-movie-jockey.-com/Google%20Chrome%20OS%20.ISO%20~%20Team%20MJY%20~MovieJockey.Com.iso"
 )
 
-# --- MULTIMÉDIA & ÉDUCATION ---
-ISO_EDUCATIONS=(
+# --- ÉDUCATION & APPRENTISSAGE ---
+ISO_EDUCATION=(
     "https://cdimages.ubuntu.com/edubuntu/releases/26.04/release/edubuntu-26.04-desktop-amd64.iso"
     "https://cdimage.ubuntu.com/edubuntu/releases/noble/release/edubuntu-24.04.4-desktop-amd64.iso"
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso"
@@ -75,7 +78,13 @@ ISO_SERVEUR=(
     "https://pkg.adfinis-on-exoscale.ch/opensuse/distribution/leap/16.0/offline/Leap-16.0-online-installer-x86_64.install.iso"
     "https://channels.nixos.org/nixos-26.05/latest-nixos-minimal-x86_64-linux.iso"
     "https://download.freebsd.org/releases/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-dvd1.iso"
+)
 
+# --- OUTILS & PARTITIONNEMENT ---
+ISO_PARTITIONS=(
+    "https://downloads.sourceforge.net/gparted/gparted-live-1.8.1-3-amd64.iso"
+    "https://github.com/rescuezilla/rescuezilla/releases/download/2.6.2/rescuezilla-2.6.2-64bit.resolute.iso"
+    "https://netix.dl.sourceforge.net/project/clonezilla/clonezilla_live_stable/3.3.3-15/clonezilla-live-3.3.3-15-amd64.iso"
 )
 
 # --- MULTIMÉDIA STREAMING / CLOUD PERSO ---
@@ -85,7 +94,7 @@ ISO_STREAMING=(
     "https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso"
 )
 
-# --- CREATION / MONTAGE VIDÉO ---
+# --- CRÉATION / MONTAGE VIDÉO ---
 ISO_MONTAGE=(
     "https://cdimage.ubuntu.com/ubuntustudio/releases/resolute/release/ubuntustudio-26.04-desktop-amd64.iso"
     "https://cdimage.ubuntu.com/ubuntustudio/releases/noble/release/ubuntustudio-24.04.3-dvd-amd64.iso"
@@ -107,8 +116,7 @@ ISO_SECURITE=(
     "https://deb.parrot.sh/parrot/iso/7.3/Parrot-security-7.3_amd64.iso"
 )
 
-
-# 4. Fonction générique de téléchargement
+# 4. Fonction de téléchargement générique
 telecharger_urls() {
     local -a urls_to_download=("${@}")
     if [ ${#urls_to_download[@]} -eq 0 ]; then
@@ -117,25 +125,30 @@ telecharger_urls() {
     fi
     
     echo -e "\n=================================================="
-    echo "Début du téléchargement (${#urls_to_download[@]} fichiers) dans $TARGET_DIR..."
+    echo "Début du téléchargement (${#urls_to_download[@]} fichier(s)) dans $TARGET_DIR..."
     echo -e "==================================================\n"
     
     for url in "${urls_to_download[@]}"; do
-        # Ignore les éléments vides éventuels
         [ -z "$url" ] && continue
         
         filename=$(basename "$url")
         echo "--------------------------------------------------"
-        echo "Vérification / Téléchargement de : $filename"
+        echo "Téléchargement / Vérification : $filename"
         echo "--------------------------------------------------"
-        # -c : Reprend le téléchargement si interrompu
-        # --no-verbose : Évite d'inonder le terminal tout en affichant l'essentiel
-        wget -c --no-verbose "$url"
+        
+        if command -v wget &>/dev/null; then
+            wget -c --no-verbose "$url"
+        elif command -v curl &>/dev/null; then
+            curl -C - -O -L "$url"
+        else
+            echo "[ERREUR] Ni wget ni curl ne sont installés sur le système."
+            return 1
+        fi
     done
-    echo -e "\n[SUCCÈS] Opération terminée pour cette sélection.\n"
+    echo -e "\n[SUCCÈS] Opération terminée."
 }
 
-# 5. Fonction pour sélectionner individuellement au sein d'une catégorie
+# 5. Menu pour la sélection individuelle
 menu_choix_individuel() {
     local categorie_nom="$1"
     shift
@@ -147,26 +160,36 @@ menu_choix_individuel() {
         echo "  SÉLECTION INDIVIDUELLE : $categorie_nom"
         echo "============================================="
         for i in "${!liste_urls[@]}"; do
-            echo "$((i+1)) ) $(basename "${liste_urls[$i]}")"
+            printf "%2d ) %s\n" "$((i+1))" "$(basename "${liste_urls[$i]}")"
         done
-        echo "T ) Télécharger TOUTE cette catégorie"
-        echo "R ) Retour au menu principal"
+        echo "---------------------------------------------"
+        echo " T ) Télécharger TOUTE cette catégorie"
+        echo " R ) Retour au menu principal"
         echo "============================================="
+        echo "Astuce : Vous pouvez entrer plusieurs numéros séparés par des espaces (ex: 1 3 4)"
         read -rp "Votre choix : " sub_choix
         
-        if [[ "$sub_choix" =~ ^[0-9]+$ ]] && [ "$sub_choix" -le "${#liste_urls[@]}" ] && [ "$sub_choix" -gt 0 ]; then
-            local index=$((sub_choix-1))
-            telecharger_urls "${liste_urls[$index]}"
-            read -rp "Appuyez sur Entrée pour continuer..."
-        elif [[ "$sub_choix" =~ ^[tT]$ ]]; then
+        if [[ "$sub_choix" =~ ^[tT]$ ]]; then
             telecharger_urls "${liste_urls[@]}"
             read -rp "Appuyez sur Entrée pour continuer..."
             break
         elif [[ "$sub_choix" =~ ^[rR]$ ]]; then
             break
-        else
-            echo "Choix invalide."
-            sleep 1
+        elif [ -n "$sub_choix" ]; then
+            local -a a_telecharger=()
+            for num in $sub_choix; do
+                if [[ "$num" =~ ^[0-9]+$ ]] && [ "$num" -ge 1 ] && [ "$num" -le "${#liste_urls[@]}" ]; then
+                    a_telecharger+=("${liste_urls[$((num-1))]}")
+                fi
+            done
+            
+            if [ ${#a_telecharger[@]} -gt 0 ]; then
+                telecharger_urls "${a_telecharger[@]}"
+                read -rp "Appuyez sur Entrée pour continuer..."
+            else
+                echo "Aucun choix valide détecté."
+                sleep 1.5
+            fi
         fi
     done
 }
@@ -176,34 +199,44 @@ menu_principal() {
     while true; do
         clear
         echo "=========================================================="
-        echo "        GESTIONNAIRE DE TÉLÉCHARGEMENT ISO (iVentoy)"
+        echo "        GESTER D'IMAGES ISO POUR IVENTOY"
         echo "=========================================================="
         echo " 1 )  BUREAUTIQUE / USAGE GÉNÉRAL"
-        echo " 2 )  MULTIMÉDIA & ÉDUCATION"
-        echo " 3 )  MULTIMÉDIA STREAMING / CLOUD PERSO (OMV, Umbrel...)"
-        echo " 4 )   SERVEURS & VIRTUALISATION (Proxmox, BSD, etc.)"
-        echo " 5 )   MONTAGE VIDÉO & PRODUCTION (Ubuntu Studio...)"
-        echo " 6 )  GAMING (Nobara, CachyOS...)"
-        echo " 7 )   SÉCURITÉ / PENTEST (Kali, Parrot...)"
+        echo " 2 )  ÉDUCATION & APPRENTISSAGE"
+        echo " 3 )  MULTIMÉDIA STREAMING & CLOUD (OMV, Umbrel...)"
+        echo " 4 )  SERVEURS & VIRTUALISATION (Proxmox, BSD...)"
+        echo " 5 )  OUTILS & PARTITIONNEMENT (Clonezilla, GParted...)"
+        echo " 6 )  MONTAGE VIDÉO & PRODUCTION (Ubuntu Studio...)"
+        echo " 7 )  GAMING (Nobara, CachyOS...)"
+        echo " 8 )  SÉCURITÉ & PENTEST (Kali, Parrot...)"
         echo "----------------------------------------------------------"
-        echo " A )  Télécharger ABSOLUMENT TOUTES les ISO (Gros volume !)"
-        echo " Q )  Quitter le script"
+        echo " A )  Télécharger ABSOLUMENT TOUTES les ISO (Très lourd !)"
+        echo " Q )  Quitter"
         echo "=========================================================="
-        read -rp "Choisissez une catégorie ou une option [1-7 / A / Q] : " choix
+        read -rp "Choisissez une option [1-8 / A / Q] : " choix
         
         case "$choix" in
             1) menu_choix_individuel "Bureautique" "${ISO_BUREAUTIQUE[@]}" ;;
-            2) menu_choix_individuel "Multimédia" "${ISO_MULTIMEDIA[@]}" ;;
+            2) menu_choix_individuel "Éducation" "${ISO_EDUCATION[@]}" ;;
             3) menu_choix_individuel "Streaming & Cloud" "${ISO_STREAMING[@]}" ;;
             4) menu_choix_individuel "Serveurs" "${ISO_SERVEUR[@]}" ;;
-            5) menu_choix_individuel "Montage Vidéo" "${ISO_MONTAGE[@]}" ;;
-            6) menu_choix_individuel "Gaming" "${ISO_GAMING[@]}" ;;
-            7) menu_choix_individuel "Sécurité" "${ISO_SECURITE[@]}" ;;
+            5) menu_choix_individuel "Partitionnement & Secours" "${ISO_PARTITIONS[@]}" ;;
+            6) menu_choix_individuel "Montage Vidéo" "${ISO_MONTAGE[@]}" ;;
+            7) menu_choix_individuel "Gaming" "${ISO_GAMING[@]}" ;;
+            8) menu_choix_individuel "Sécurité" "${ISO_SECURITE[@]}" ;;
             [aA])
                 echo "Êtes-vous sûr de vouloir télécharger TOUTES les catégories ? (Plusieurs dizaines de Go)"
                 read -rp "Continuer ? (o/N) : " confirm
                 if [[ "$confirm" =~ ^[oO]$ ]]; then
-                    telecharger_urls "${ISO_BUREAUTIQUE[@]}" "${ISO_MULTIMEDIA[@]}" "${ISO_STREAMING[@]}" "${ISO_SERVEUR[@]}" "${ISO_MONTAGE[@]}" "${ISO_GAMING[@]}" "${ISO_SECURITE[@]}"
+                    telecharger_urls \
+                        "${ISO_BUREAUTIQUE[@]}" \
+                        "${ISO_EDUCATION[@]}" \
+                        "${ISO_STREAMING[@]}" \
+                        "${ISO_SERVEUR[@]}" \
+                        "${ISO_PARTITIONS[@]}" \
+                        "${ISO_MONTAGE[@]}" \
+                        "${ISO_GAMING[@]}" \
+                        "${ISO_SECURITE[@]}"
                     read -rp "Appuyez sur Entrée pour continuer..."
                 fi
                 ;;
