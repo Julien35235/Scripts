@@ -199,7 +199,7 @@ menu_principal() {
     while true; do
         clear
         echo "=========================================================="
-        echo "        GESTER D'IMAGES ISO POUR IVENTOY"
+        echo "        LES IMAGES ISO POUR IVENTOY"
         echo "=========================================================="
         echo " 1 )  BUREAUTIQUE / USAGE GÉNÉRAL"
         echo " 2 )  ÉDUCATION & APPRENTISSAGE"
