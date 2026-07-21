@@ -4,7 +4,6 @@
 
 Fichier : /root/proxmox-report.html
 
-root@nuc:~# cat rapport.sh
 #!/bin/bash
 
 #
