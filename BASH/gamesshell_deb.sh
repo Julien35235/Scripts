@@ -2,8 +2,6 @@
 sudo apt update && sudo apt full-upgrade -y
 #Installations des dépendances 
 sudo apt install git nala ssh wget curl -y
-#Se rendre dans le répertoire /opt 
-cd /opt
 #Creation du répertoire de gameshell
 mkdir gameshell
 cd gameshell
