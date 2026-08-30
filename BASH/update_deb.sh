@@ -3,6 +3,6 @@
 echo ">>------------------------------------------------$(date)---------------------------------------------<<" >> /var/log/update_upgrade.log
 echo ">>------------------errors------------------------------$(date)---------------errors------------------------------<<" >> /var/log/update_upgrade.err
 export DEBIAN_FRONTEND=noninteractive
-apt-get update && apt full-upgrade -y >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err
+apt update && apt full-upgrade -y >> /var/log/update_upgrade.log 2>> /var/log/update_upgrade.err
 
 https://www.it-connect.fr/automatiser-le-processus-de-mise-a-jour-apt-sur-debian/
