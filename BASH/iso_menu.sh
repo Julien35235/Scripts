@@ -19,6 +19,7 @@ cd "$TARGET_DIR" || { echo "[ERREUR] Impossible d'accéder à $TARGET_DIR. Fin d
 
 # --- BUREAUTIQUE / USAGE GÉNÉRAL ---
 ISO_BUREAUTIQUE=(
+    "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.6.0-amd64-netinst.iso"
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-desktop-amd64.iso"
     "https://releases.ubuntu.com/noble/ubuntu-24.04.4-desktop-amd64.iso"
     "https://cdimage.ubuntu.com/ubuntucinnamon/releases/resolute/release/ubuntucinnamon-26.04-desktop-amd64.iso"
@@ -58,6 +59,7 @@ ISO_EDUCATION=(
 # --- SERVEURS & SYSTÈMES ---
 ISO_SERVEUR=(
     "https://downloads.xenserver.com/xenserver/2026-06-23.0132/XenServer9_2026-06-23.iso"
+    "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.6.0-amd64-netinst.iso"
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso"
     "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
