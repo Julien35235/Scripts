@@ -30,6 +30,7 @@ URLS=(
     "https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-xfce-64bit.iso"
     "https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-mate-64bit.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
+    "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.6.0-amd64-netinst.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/install-amd64-minimal-20260712T170110Z.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/livegui-amd64-20260712T170110Z.iso"
     "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso"
