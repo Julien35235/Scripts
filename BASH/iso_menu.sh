@@ -45,6 +45,7 @@ ISO_BUREAUTIQUE=(
     "https://mirror.lagoon.nc/linuxlite/linuxlite/isos/8.0/linux-lite-8.0-64bit.iso"
     "https://fastly.mirror.pkgbuild.com/iso/2026.07.01/archlinux-x86_64.iso"
     "https://archive.org/download/google-chrome-os-.-iso-team-mjy-movie-jockey.-com/Google%20Chrome%20OS%20.ISO%20~%20Team%20MJY%20~MovieJockey.Com.iso"
+    "https://altushost-bul.dl.sourceforge.net/project/accessible-coconut/Accessible-Coconut-22.04.4/Accessible-Coconut-22.04.04-amd64.iso"
 )
 
 # --- ÉDUCATION & APPRENTISSAGE ---
@@ -54,6 +55,7 @@ ISO_EDUCATION=(
     "https://mirrors.univ-reims.fr/IMAGES/zorinos/18/Zorin-OS-18.1-Education-64-bit.iso"
     "https://archive.org/download/endless-os-3x-64bit-pc/eos-eos3.9-amd64-amd64.210706-203204.base.iso"
     "https://primtux.fr/PrimTux9-M22.3-64bit-2026-02-27.iso"
+    "https://altushost-bul.dl.sourceforge.net/project/accessible-coconut/Accessible-Coconut-22.04.4/Accessible-Coconut-22.04.04-amd64.iso"
 )
 
 # --- SERVEURS & SYSTÈMES ---
