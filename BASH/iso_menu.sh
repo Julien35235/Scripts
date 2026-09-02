@@ -67,7 +67,7 @@ ISO_SERVEUR=(
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/install-amd64-minimal-20260712T170110Z.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/livegui-amd64-20260712T170110Z.iso"
-    "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso"
+    "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso
     "https://enterprise.proxmox.com/iso/proxmox-backup-server_4.2-1.iso"
     "https://enterprise.proxmox.com/iso/proxmox-mail-gateway_9.1-1.iso"
     "https://enterprise.proxmox.com/iso/proxmox-datacenter-manager_1.1-1.iso"
