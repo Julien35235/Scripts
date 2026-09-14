@@ -65,6 +65,7 @@ ISO_SERVEUR=(
     "https://releases.ubuntu.com/resolute/ubuntu-26.04-live-server-amd64.iso"
     "https://releases.ubuntu.com/noble/ubuntu-24.04.4-live-server-amd64.iso"
     "https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.5.0-amd64-netinst.iso"
+    "https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/install-amd64-minimal-20260712T170110Z.iso"
     "https://distfiles.gentoo.org/releases/amd64/autobuilds/20260712T170110Z/livegui-amd64-20260712T170110Z.iso"
     "https://enterprise.proxmox.com/iso/proxmox-ve_9.2-1.iso
@@ -95,7 +96,6 @@ ISO_PARTITIONS=(
 ISO_STREAMING=(
     "https://umbrel-release-assets.a45c7e2f6ae2c47088a72e84553d4403.r2.cloudflarestorage.com/1.7.4/umbrelos-amd64-usb-installer.iso"
     "https://deac-ams.dl.sourceforge.net/project/openmediavault/iso/8.3.1/openmediavault_8.3.1-amd64.iso"
-    "https://dietpi.com/downloads/images/DietPi_VM-x86_64-Trixie_Installer.iso"
 )
 
 # --- CRÉATION / MONTAGE VIDÉO ---
