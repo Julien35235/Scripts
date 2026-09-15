@@ -9,3 +9,4 @@ cd /opt
 wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.62.1/fastfetch-linux-amd64.deb
 #installation de fastfetch 
 apt install ./fastfetch-linux-amd64.deb -y
+rm fastfetch-linux-amd64.deb
